@@ -1,0 +1,20 @@
+Default: &defaults
+  database: skanda.sqlite3
+  poolsize: 10
+
+Development:
+  <<: *defaults
+
+Testing:
+  database: skanda_test.sqlite3
+  <<: *defaults
+
+Staging:
+  database: skanda_staging.sqlite3
+  poolsize: 100
+  <<: *defaults
+
+Production:
+  database: skanda_production.sqlite3
+  poolsize: 100
+  <<: *defaults
